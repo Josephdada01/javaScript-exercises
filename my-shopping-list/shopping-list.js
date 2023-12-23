@@ -1,5 +1,5 @@
 // the three variables that hold reference to the list ul, input, and button
-const ulElement = document.querySelector('ul')
+const ulElem = document.querySelector('ul')
 
 const input = document.querySelector('input')
 
@@ -20,10 +20,10 @@ button.addEventListener('click', () =>
     listText.textContent = inputValue;
     listItem.appendChild(listBut);
     listBut.textContent = 'Delete';
-    ulElement.appendChild(listItem);
+    ulElem.appendChild(listItem);
 
     listBut.addEventListener('click', () => {
-        ulElement.removeChild(listItem);
+        ulElem.removeChild(listItem);
     });
     input.focus();    
 });
