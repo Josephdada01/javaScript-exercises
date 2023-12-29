@@ -5,8 +5,12 @@
  */
 const fibonacci = function(number) {
     // If the position is 0 or 1, return the number itself
-    if (number <= 1) {
-        return number;
+    if (number < 0) {
+        throw new Error('Fibonaci sequence is not defined for negative number');
+    }
+
+    if (number === 0) {
+        return 0;
     }
     let previous = 0; // Initialize the value for the previous number in the sequence
     let current = 1; //Initialize the value for the current number in the sequence
